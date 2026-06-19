@@ -36,7 +36,7 @@ export default function ContactPage() {
             <Input name="user_name" required placeholder="Twoje imię" className="w-full" />
           </div>
           <div>
-            <Input name="user_email" type="email" required placeholder="twoj@email.pl" className="w-full" />
+            <Input name="user_email" type="email" required placeholder="example@email.com" className="w-full" />
           </div>
           <div>
             <TextArea name="user_text" required placeholder="Napisz wiadomość..." rows={5} className="w-full" />
