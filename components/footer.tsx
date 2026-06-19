@@ -1,4 +1,3 @@
-import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 export function SiteFooter() {
@@ -9,14 +8,6 @@ export function SiteFooter() {
           HendiMejdi
         </Link>
         <p className="text-sm text-neutral-400">Ręcznie robione z miłością ♥</p>
-        <div className="flex gap-5">
-          <Link href="/" aria-label="Facebook" className="text-neutral-400 hover:text-[var(--color-rose-gold)] transition-colors">
-            <FaFacebook size={22} />
-          </Link>
-          <Link href="/" aria-label="Instagram" className="text-neutral-400 hover:text-[var(--color-rose-gold)] transition-colors">
-            <FaInstagram size={22} />
-          </Link>
-        </div>
         <p className="text-xs text-neutral-300 mt-2">© {new Date().getFullYear()} HendiMejdi. Wszelkie prawa zastrzeżone.</p>
       </div>
     </footer>
