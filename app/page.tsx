@@ -10,15 +10,14 @@ export default async function HomePage() {
     <div>
       {/* Hero */}
       <section className="text-center mb-16">
-        <p className="text-lg text-neutral-500 max-w-md mx-auto">
-          Unikalne, ręcznie robione torebki i plecaki ze sznurka i przędzy
+        <p className="text-lg text-neutral-500 w-full mx-auto">
+          Ręcznie robione torebki i plecaki ze sznurka i przędzy
         </p>
         <div className="mt-6 w-16 h-0.5 bg-gradient-to-r from-[var(--color-rose-light)] to-[var(--color-rose-gold)] mx-auto rounded-full" />
       </section>
 
       {/* Products */}
       <section>
-        <h2 className="text-2xl font-medium text-center mb-10 text-neutral-700">Produkty</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {res.items.map((product: any) => (
             <ProductCard key={product.sys.id} product={product} />
