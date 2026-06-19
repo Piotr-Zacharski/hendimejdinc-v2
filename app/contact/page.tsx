@@ -14,7 +14,7 @@ export default function ContactPage() {
     e.preventDefault();
     setSending(true);
     try {
-      await sendForm("service_usl08gc", "template_quokdn5", "#contact-form");
+      await sendForm("service_x09bspe", "template_quokdn5", "#contact-form");
       formRef.current?.reset();
       toast.success("Twoja wiadomość została wysłana!");
     } catch {
