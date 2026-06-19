@@ -106,9 +106,9 @@ export default function MyBagPage() {
           <Form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="relative">
               <ClearButton visible={!!sel.name} onClear={() => setSel((s) => ({ ...s, name: null }))} />
-              <Select name="name" isRequired className="w-full" value={sel.name} onSelectionChange={(v) => setSel((s) => ({ ...s, name: v as string | null }))}>
+              <Select name="name" isRequired className="w-full" placeholder="Wybierz wzór..." value={sel.name} onSelectionChange={(v) => setSel((s) => ({ ...s, name: v as string | null }))}>
                 <Label className="text-sm font-medium text-neutral-600">Wzór</Label>
-                <Select.Trigger><Select.Value placeholder="Wybierz wzór..." /><Select.Indicator /></Select.Trigger>
+                <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                 <Select.Popover>
                   <ListBox>
                     {patterns.map((p) => <ListBox.Item key={p} id={p} textValue={p}>{p}</ListBox.Item>)}
@@ -119,9 +119,9 @@ export default function MyBagPage() {
 
             <div className="relative">
               <ClearButton visible={!!sel.color} onClear={() => setSel((s) => ({ ...s, color: null }))} />
-              <Select name="color" isRequired className="w-full" value={sel.color} onSelectionChange={(v) => setSel((s) => ({ ...s, color: v as string | null }))}>
+              <Select name="color" isRequired className="w-full" placeholder="Wybierz..." value={sel.color} onSelectionChange={(v) => setSel((s) => ({ ...s, color: v as string | null }))}>
                 <Label className="text-sm font-medium text-neutral-600">Kolor okucia</Label>
-                <Select.Trigger><Select.Value placeholder="Wybierz..." /><Select.Indicator /></Select.Trigger>
+                <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                 <Select.Popover>
                   <ListBox>
                     <ListBox.Item id="złoty" textValue="złoty">złoty</ListBox.Item>
@@ -133,9 +133,9 @@ export default function MyBagPage() {
 
             <div className="relative">
               <ClearButton visible={!!sel.type} onClear={() => setSel((s) => ({ ...s, type: null }))} />
-              <Select name="type" isRequired className="w-full" value={sel.type} onSelectionChange={(v) => setSel((s) => ({ ...s, type: v as string | null }))}>
+              <Select name="type" isRequired className="w-full" placeholder="Wybierz..." value={sel.type} onSelectionChange={(v) => setSel((s) => ({ ...s, type: v as string | null }))}>
                 <Label className="text-sm font-medium text-neutral-600">Rodzaj paska</Label>
-                <Select.Trigger><Select.Value placeholder="Wybierz..." /><Select.Indicator /></Select.Trigger>
+                <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                 <Select.Popover>
                   <ListBox>
                     <ListBox.Item id="pleciony" textValue="pleciony">pleciony</ListBox.Item>
@@ -147,9 +147,9 @@ export default function MyBagPage() {
 
             <div className="relative">
               <ClearButton visible={!!sel.length} onClear={() => setSel((s) => ({ ...s, length: null }))} />
-              <Select name="length" isRequired className="w-full" value={sel.length} onSelectionChange={(v) => setSel((s) => ({ ...s, length: v as string | null }))}>
+              <Select name="length" isRequired className="w-full" placeholder="Wybierz..." value={sel.length} onSelectionChange={(v) => setSel((s) => ({ ...s, length: v as string | null }))}>
                 <Label className="text-sm font-medium text-neutral-600">Długość paska</Label>
-                <Select.Trigger><Select.Value placeholder="Wybierz..." /><Select.Indicator /></Select.Trigger>
+                <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                 <Select.Popover>
                   <ListBox>
                     <ListBox.Item id="100 cm" textValue="100 cm">100 cm</ListBox.Item>
@@ -163,9 +163,9 @@ export default function MyBagPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
                 <ClearButton visible={!!sel.yarn} onClear={() => setSel((s) => ({ ...s, yarn: null }))} />
-                <Select name="yarn" className="w-full" isDisabled={!!sel.cord} value={sel.yarn} onSelectionChange={(v) => setSel((s) => ({ ...s, yarn: v as string | null }))}>
+                <Select name="yarn" className="w-full" placeholder="— opcjonalne —" isDisabled={!!sel.cord} value={sel.yarn} onSelectionChange={(v) => setSel((s) => ({ ...s, yarn: v as string | null }))}>
                   <Label className="text-sm font-medium text-neutral-600">Przędza T-shirt yarn</Label>
-                  <Select.Trigger><Select.Value placeholder="— opcjonalne —" /><Select.Indicator /></Select.Trigger>
+                  <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                   <Select.Popover>
                     <ListBox>
                       {tyarns.map((y) => <ListBox.Item key={y} id={y} textValue={y}>{y}</ListBox.Item>)}
@@ -176,9 +176,9 @@ export default function MyBagPage() {
 
               <div className="relative">
                 <ClearButton visible={!!sel.cord} onClear={() => setSel((s) => ({ ...s, cord: null }))} />
-                <Select name="cord" className="w-full" isDisabled={!!sel.yarn} value={sel.cord} onSelectionChange={(v) => setSel((s) => ({ ...s, cord: v as string | null }))}>
+                <Select name="cord" className="w-full" placeholder="— opcjonalne —" isDisabled={!!sel.yarn} value={sel.cord} onSelectionChange={(v) => setSel((s) => ({ ...s, cord: v as string | null }))}>
                   <Label className="text-sm font-medium text-neutral-600">Sznurek</Label>
-                  <Select.Trigger><Select.Value placeholder="— opcjonalne —" /><Select.Indicator /></Select.Trigger>
+                  <Select.Trigger><Select.Value /><Select.Indicator /></Select.Trigger>
                   <Select.Popover>
                     <ListBox>
                       {cordColors.map((c) => <ListBox.Item key={c} id={c} textValue={c}>{c}</ListBox.Item>)}
