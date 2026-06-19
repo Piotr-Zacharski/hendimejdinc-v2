@@ -149,7 +149,7 @@ export function MyBagForm({ productImages }: { productImages: Record<string, str
             ) : (
               <div className="text-center py-8 text-neutral-300">
                 <div className="text-4xl mb-3">👜</div>
-                <p className="text-sm">Wybierz opcje po lewej,<br />a podsumowanie pojawi się tutaj</p>
+                <p className="text-sm">Skomponuj swój produkt,<br />a podsumowanie pojawi się tutaj</p>
               </div>
             )}
           </div>
