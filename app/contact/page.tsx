@@ -33,15 +33,12 @@ export default function ContactPage() {
         <Form id="contact-form" ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
           <input type="hidden" name="_captcha" value="false" />
           <div>
-            <Label className="text-sm font-medium text-neutral-600 mb-1">Imię</Label>
             <Input name="user_name" required placeholder="Twoje imię" className="w-full" />
           </div>
           <div>
-            <Label className="text-sm font-medium text-neutral-600 mb-1">Email</Label>
             <Input name="user_email" type="email" required placeholder="twoj@email.pl" className="w-full" />
           </div>
           <div>
-            <Label className="text-sm font-medium text-neutral-600 mb-1">Wiadomość</Label>
             <TextArea name="user_text" required placeholder="Napisz wiadomość..." rows={5} className="w-full" />
           </div>
           <Button type="submit" isDisabled={sending} className="w-full py-3 rounded-xl bg-gradient-to-r from-[var(--color-rose-gold)] to-[var(--color-rose-dark)] text-white font-medium hover:opacity-90 transition-opacity">
