@@ -7,7 +7,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <NextThemesProvider attribute="class" defaultTheme="light">
       {children}
-      <Toast.Provider placement="bottom-center" />
+      <Toast.Provider placement="bottom" />
     </NextThemesProvider>
   );
 }
