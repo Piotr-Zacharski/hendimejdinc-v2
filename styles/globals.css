@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@import "@heroui-pro/react/css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Montserrat Alternates", sans-serif;
+  --color-rose-gold: #b76e79;
+  --color-rose-light: #ffb6c1;
+  --color-rose-dark: #9a5560;
+  --color-cream: #fdf8f5;
+}
+
+@layer base {
+  body {
+    background: linear-gradient(180deg, var(--color-cream) 0%, #ffffff 50%);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

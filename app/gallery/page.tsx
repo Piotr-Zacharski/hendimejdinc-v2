@@ -1,0 +1,157 @@
+"use client";
+
+import { Tabs } from "@heroui/react";
+import Image from "next/image";
+
+const tyarns = [
+  { name: "Śnieżna biel", url: "/tyarn/Sniezna_biel.png" },
+  { name: "Chłodny beż", url: "/tyarn/Chlodny_bez.png" },
+  { name: "Wanilia", url: "/tyarn/Wanilia.png" },
+  { name: "Śmietanka", url: "/tyarn/Smietanka.png" },
+  { name: "Krem", url: "/tyarn/Krem.png" },
+  { name: "Ciasteczko", url: "/tyarn/Ciasteczko.png" },
+  { name: "Koniak", url: "/tyarn/Koniak.png" },
+  { name: "Miód", url: "/tyarn/Miod.png" },
+  { name: "Kawa", url: "/tyarn/Kawa.png" },
+  { name: "Cynamon", url: "/tyarn/Cynamon.png" },
+  { name: "Czekolada", url: "/tyarn/Czekolada.png" },
+  { name: "Musztarda", url: "/tyarn/Musztarda.png" },
+  { name: "Suszone morele", url: "/tyarn/Suszone_morele.png" },
+  { name: "Mandarynka", url: "/tyarn/Mandarynka.png" },
+  { name: "Czerwień", url: "/tyarn/Czerwien.png" },
+  { name: "Wino", url: "/tyarn/Wino.png" },
+  { name: "Różowy krem", url: "/tyarn/Rozowy_krem.png" },
+  { name: "Łosoś", url: "/tyarn/Losos.png" },
+  { name: "Brudny róż", url: "/tyarn/Brudny_roz.png" },
+  { name: "Cukierkowy róż", url: "/tyarn/Cukierkowy_roz.png" },
+  { name: "Słodki róż", url: "/tyarn/Slodki_roz.png" },
+  { name: "Malina", url: "/tyarn/Malina.png" },
+  { name: "Fuksja", url: "/tyarn/Fuksja.png" },
+  { name: "Biskupi", url: "/tyarn/Biskupi.png" },
+  { name: "Jagoda", url: "/tyarn/Jagoda.png" },
+  { name: "Jasny fiolet", url: "/tyarn/Jasny_fiolet.png" },
+  { name: "Lawenda", url: "/tyarn/Lawenda.png" },
+  { name: "Śliwka", url: "/tyarn/Sliwka.png" },
+  { name: "Banan", url: "/tyarn/Banan.png" },
+  { name: "Cytryna", url: "/tyarn/Cytryna.png" },
+  { name: "Limonka", url: "/tyarn/Limonka.png" },
+  { name: "Zieleń", url: "/tyarn/Zielen.png" },
+  { name: "Khaki", url: "/tyarn/Khaki.png" },
+  { name: "Szałwia", url: "/tyarn/szalwia.png" },
+  { name: "Jodła", url: "/tyarn/Jodla.png" },
+  { name: "Pastelowa mięta", url: "/tyarn/Pastelowa_mieta.png" },
+  { name: "Brudna mięta", url: "/tyarn/Brudna_mieta.png" },
+  { name: "Błękit", url: "/tyarn/Blekit.png" },
+  { name: "Jeans", url: "/tyarn/Jeans.png" },
+  { name: "Chaber", url: "/tyarn/Chaber.png" },
+  { name: "Petrol", url: "/tyarn/Petrol.png" },
+  { name: "Morski", url: "/tyarn/Morski.png" },
+  { name: "Granat", url: "/tyarn/Granat.png" },
+  { name: "Jasny szary", url: "/tyarn/Jasny_szary.png" },
+  { name: "Szary", url: "/tyarn/Szary.png" },
+  { name: "Grafit", url: "/tyarn/Grafit.png" },
+  { name: "Czarny", url: "/tyarn/Czarny.png" },
+];
+
+const cords = [
+  { name: "Śnieżna biel", url: "/cord/Sniezna_biel.png" },
+  { name: "Len", url: "/cord/Len.png" },
+  { name: "Wanilia", url: "/cord/Wanilia.png" },
+  { name: "Krem", url: "/cord/Krem.png" },
+  { name: "Ciasteczko", url: "/cord/Ciasteczko.png" },
+  { name: "Miód", url: "/cord/Miod.png" },
+  { name: "Karmel", url: "/cord/Karmel.png" },
+  { name: "Kawa", url: "/cord/Kawa.png" },
+  { name: "Cynamon", url: "/cord/Cynamon.png" },
+  { name: "Mleczna czekolada", url: "/cord/Mleczna_czekolada.png" },
+  { name: "Czekolada", url: "/cord/Czekolada.png" },
+  { name: "Musztarda", url: "/cord/Musztarda.png" },
+  { name: "Cegła", url: "/cord/Cegla.png" },
+  { name: "Brzoskwinia", url: "/cord/Brzoskwinia.png" },
+  { name: "Mandarynka", url: "/cord/Mandarynka.png" },
+  { name: "Czerwień", url: "/cord/Czerwien.png" },
+  { name: "Wiśnia", url: "/cord/Wisnia.png" },
+  { name: "Wino", url: "/cord/Wino.png" },
+  { name: "Różowy krem", url: "/cord/Rozowy_krem.png" },
+  { name: "Koralowy", url: "/cord/Koralowy.png" },
+  { name: "Brudny róż", url: "/cord/Brudny_roz.png" },
+  { name: "Cukierkowy róż", url: "/cord/Cukierkowy_roz.png" },
+  { name: "Słodki róż", url: "/cord/Slodki_roz.png" },
+  { name: "Barbie", url: "/cord/Barbie.png" },
+  { name: "Malina", url: "/cord/Malina.png" },
+  { name: "Jagoda", url: "/cord/Jagoda.png" },
+  { name: "Lawenda", url: "/cord/Lawenda.png" },
+  { name: "Wrzos", url: "/cord/Wrzos.png" },
+  { name: "Ultrafiolet", url: "/cord/Ultrafiolet.png" },
+  { name: "Śliwka", url: "/cord/Sliwka.png" },
+  { name: "Banan", url: "/cord/Banan.png" },
+  { name: "Cytryna", url: "/cord/Cytryna.png" },
+  { name: "Limonka", url: "/cord/Limonka.png" },
+  { name: "Zieleń 1", url: "/cord/Zielen_1.png" },
+  { name: "Zieleń 2", url: "/cord/Zielen_2.png" },
+  { name: "Khaki", url: "/cord/Khaki.png" },
+  { name: "Szałwia", url: "/cord/szalwia.png" },
+  { name: "Jodła", url: "/cord/Jodla.png" },
+  { name: "Ciemna zieleń", url: "/cord/Ciemna_zielen.png" },
+  { name: "Pistacja", url: "/cord/Pistacja.png" },
+  { name: "Oliwka", url: "/cord/Oliwka.png" },
+  { name: "Lodowy", url: "/cord/Lodowy.png" },
+  { name: "Lazur", url: "/cord/Lazur.png" },
+  { name: "Morski", url: "/cord/Morski.png" },
+  { name: "Błękit", url: "/cord/Blekit.png" },
+  { name: "Fiołek", url: "/cord/Fiolek.png" },
+  { name: "Jeans", url: "/cord/Jeans.png" },
+  { name: "Chaber", url: "/cord/Chaber.png" },
+  { name: "Petrol", url: "/cord/Petrol.png" },
+  { name: "Granat", url: "/cord/Granat.png" },
+  { name: "Siwy", url: "/cord/Siwy.png" },
+  { name: "Jasny szary 1", url: "/cord/Jasny_szary1.png" },
+  { name: "Jasny szary 2", url: "/cord/Jasny_szary2.png" },
+  { name: "Popielaty", url: "/cord/Popielaty.png" },
+  { name: "Szary", url: "/cord/Szary.png" },
+  { name: "Grafit", url: "/cord/Grafit.png" },
+  { name: "Czarny", url: "/cord/Czarny.png" },
+  { name: "Melanż 1", url: "/cord/Melanz_jeans-roz.png" },
+  { name: "Melanż 2", url: "/cord/Melanz_roz-granat.png" },
+  { name: "Melanż 3", url: "/cord/Melanz_roz-szary.png" },
+  { name: "Melanż 4", url: "/cord/Melanz_sliwka-malina-petrol.png" },
+  { name: "Melanż 5", url: "/cord/Melanz_zloty.png" },
+];
+
+function ColorGrid({ items }: { items: { name: string; url: string }[] }) {
+  return (
+    <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-4 mt-8">
+      {items.map((item) => (
+        <div key={item.name} className="group rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 p-2 flex flex-col items-center">
+          <div className="rounded-lg overflow-hidden">
+            <Image src={item.url} alt={item.name} width={90} height={90} className="rounded-lg group-hover:scale-110 transition-transform duration-300" />
+          </div>
+          <p className="text-[9px] font-medium text-neutral-500 text-center mt-2 leading-tight tracking-wide">{item.name.toUpperCase()}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function GalleryPage() {
+  return (
+    <div className="w-full">
+      <h1 className="text-3xl font-semibold text-center mb-2 font-[Montserrat_Alternates] text-neutral-800">Karta kolorów</h1>
+      <p className="text-center text-neutral-400 mb-8">Wybierz kolor dla swojej torebki lub plecaka</p>
+      <Tabs variant="secondary" defaultSelectedKey="cord" className="w-full">
+        <Tabs.ListContainer className="flex justify-center">
+          <Tabs.List aria-label="Kolory">
+            <Tabs.Tab id="cord">SZNUREK</Tabs.Tab>
+            <Tabs.Tab id="tyarn">T-SHIRT YARN</Tabs.Tab>
+          </Tabs.List>
+        </Tabs.ListContainer>
+        <Tabs.Panel id="cord">
+          <ColorGrid items={cords} />
+        </Tabs.Panel>
+        <Tabs.Panel id="tyarn">
+          <ColorGrid items={tyarns} />
+        </Tabs.Panel>
+      </Tabs>
+    </div>
+  );
+}
