@@ -29,17 +29,13 @@ export default function GalleryPage() {
           <Tabs.List aria-label="Kolory">
             <Tabs.Tab
               id="cord"
-              className={({ isSelected }) =>
-                `px-2! transition-colors ${isSelected ? "text-[var(--color-rose-gold)]! font-semibold" : ""}`
-              }
+              className="px-2! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
             >
               SZNUREK
             </Tabs.Tab>
             <Tabs.Tab
               id="tyarn"
-              className={({ isSelected }) =>
-                `px-2! transition-colors ${isSelected ? "text-[var(--color-rose-gold)]! font-semibold" : ""}`
-              }
+              className="px-2! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
             >
               T-SHIRT YARN
             </Tabs.Tab>
