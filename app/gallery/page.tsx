@@ -23,7 +23,7 @@ export default function GalleryPage() {
   return (
     <div className="w-full">
       <h1 className="text-3xl font-semibold text-center mb-2 font-[Montserrat_Alternates] text-neutral-800">Karta kolorów</h1>
-      <p className="text-center text-neutral-400 mb-8">Wybierz kolor dla swojej torebki lub plecaka</p>
+      <p className="text-center text-neutral-400 mb-8">Wybierz materiał i kolor dla swojej torebki lub plecaka</p>
       <Tabs variant="secondary" defaultSelectedKey="cord" className="w-full">
         <Tabs.ListContainer className="flex justify-center">
           <Tabs.List aria-label="Kolory" className="w-auto! gap-2">
