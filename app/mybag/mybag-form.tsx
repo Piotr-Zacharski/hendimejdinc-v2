@@ -67,7 +67,6 @@ export function MyBagForm({ productImages }: { productImages: Record<string, str
 
   return (
     <div className="max-w-5xl mx-auto">
-      <h1 className="text-3xl font-semibold text-center mb-2 font-[Montserrat_Alternates] text-neutral-800">Skomponuj swoją torebkę</h1>
       <p className="text-center text-neutral-400 mb-10">
         Ty decydujesz o kolorze, wzorze i rodzaju paska. Termin realizacji: 14-21 dni.
       </p>
