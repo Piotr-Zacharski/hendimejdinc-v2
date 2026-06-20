@@ -27,8 +27,22 @@ export default function GalleryPage() {
       <Tabs variant="secondary" defaultSelectedKey="cord" className="w-full">
         <Tabs.ListContainer className="flex justify-center">
           <Tabs.List aria-label="Kolory">
-            <Tabs.Tab id="cord">SZNUREK</Tabs.Tab>
-            <Tabs.Tab id="tyarn">T-SHIRT YARN</Tabs.Tab>
+            <Tabs.Tab
+              id="cord"
+              className={({ isSelected }) =>
+                `px-2! transition-colors ${isSelected ? "text-[var(--color-rose-gold)]! font-semibold" : ""}`
+              }
+            >
+              SZNUREK
+            </Tabs.Tab>
+            <Tabs.Tab
+              id="tyarn"
+              className={({ isSelected }) =>
+                `px-2! transition-colors ${isSelected ? "text-[var(--color-rose-gold)]! font-semibold" : ""}`
+              }
+            >
+              T-SHIRT YARN
+            </Tabs.Tab>
           </Tabs.List>
         </Tabs.ListContainer>
         <Tabs.Panel id="cord">
