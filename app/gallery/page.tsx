@@ -26,16 +26,16 @@ export default function GalleryPage() {
       <p className="text-center text-neutral-400 mb-8">Wybierz kolor dla swojej torebki lub plecaka</p>
       <Tabs variant="secondary" defaultSelectedKey="cord" className="w-full">
         <Tabs.ListContainer className="flex justify-center">
-          <Tabs.List aria-label="Kolory">
+          <Tabs.List aria-label="Kolory" className="w-auto! gap-2">
             <Tabs.Tab
               id="cord"
-              className="px-2! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
+              className="w-auto! px-3! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
             >
               SZNUREK
             </Tabs.Tab>
             <Tabs.Tab
               id="tyarn"
-              className="px-2! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
+              className="w-auto! px-3! transition-colors data-[selected=true]:text-[var(--color-rose-gold)]! data-[selected=true]:font-semibold"
             >
               T-SHIRT YARN
             </Tabs.Tab>
